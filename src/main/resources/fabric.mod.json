@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "hearthian-mod-template",
+	"version": "${version}",
+	"name": "Hearthian mod template",
+	"description": "Mod description",
+	"authors": [
+		"HearthianDev"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/hearthian-mod-template/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.hearthian.template.HearthianModTemplate"
+		],
+		"client": [
+			"net.hearthian.template.HearthianModTemplateClient"
+		]
+	},
+	"mixins": [
+		"hearthian-mod-template.mixins.json",
+		{
+			"config": "hearthian-mod-template.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
