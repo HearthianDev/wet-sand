@@ -1,9 +1,9 @@
 {
 	"required": true,
-	"package": "net.hearthian.template.mixin",
+	"package": "net.hearthian.wetsand.mixin.client",
 	"compatibilityLevel": "JAVA_21",
-	"mixins": [
-		"ExampleMixin"
+	"client": [
+		"ExampleClientMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

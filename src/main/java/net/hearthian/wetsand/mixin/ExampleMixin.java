@@ -1,4 +1,4 @@
-package net.hearthian.template.mixin;
+package net.hearthian.wetsand.mixin;
 
 import net.minecraft.server.MinecraftServer;
 import org.spongepowered.asm.mixin.Mixin;

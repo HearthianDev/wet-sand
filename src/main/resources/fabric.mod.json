@@ -1,31 +1,31 @@
 {
 	"schemaVersion": 1,
-	"id": "hearthian-mod-template",
+	"id": "wet-sand",
 	"version": "${version}",
-	"name": "Hearthian mod template",
-	"description": "Mod description",
+	"name": "Wet sand",
+	"description": "Adds wet sand variants",
 	"authors": [
 		"HearthianDev"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/HearthianDev",
+		"sources": "https://github.com/HearthianDev/wet-sand"
 	},
-	"license": "CC0-1.0",
-	"icon": "assets/hearthian-mod-template/icon.png",
+	"license": "GPL-3.0",
+	"icon": "assets/wet-sand/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"net.hearthian.template.HearthianModTemplate"
+			"net.hearthian.wetsand.WetSand"
 		],
 		"client": [
-			"net.hearthian.template.HearthianModTemplateClient"
+			"net.hearthian.wetsand.WetSandClient"
 		]
 	},
 	"mixins": [
-		"hearthian-mod-template.mixins.json",
+		"wet-sand.mixins.json",
 		{
-			"config": "hearthian-mod-template.client.mixins.json",
+			"config": "wet-sand.client.mixins.json",
 			"environment": "client"
 		}
 	],
