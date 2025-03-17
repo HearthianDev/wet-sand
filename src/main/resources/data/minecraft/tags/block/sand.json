@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "wet-sand:moist_sand",
+    "wet-sand:damp_sand",
+    "wet-sand:wet_sand",
+    "wet-sand:moist_red_sand",
+    "wet-sand:damp_red_sand",
+    "wet-sand:wet_red_sand"
+  ]
+}

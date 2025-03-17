@@ -3,7 +3,7 @@
 	"package": "net.hearthian.wetsand.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+		"block.RegistryMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

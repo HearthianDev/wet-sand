@@ -5,6 +5,9 @@ import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static net.hearthian.wetsand.utils.initializer.initBlockItems;
+import static net.hearthian.wetsand.utils.initializer.initCreativePlacement;
+
 public class WetSand implements ModInitializer {
 	public static final String MOD_ID = "wet-sand";
 
@@ -19,6 +22,8 @@ public class WetSand implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		LOGGER.info("Hello Fabric world!");
+		LOGGER.info("Initializing...");
+		initBlockItems();
+		initCreativePlacement();
 	}
 }
