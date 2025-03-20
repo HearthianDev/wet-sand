@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "wet-sand:item/damp_red_sand"
+    "model": "wet-sand:item/soaked_red_sand"
   }
 }

@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "concrete",
+  "ingredients": [
+    "minecraft:pink_dye",
+    "gravel",
+    "gravel",
+    "gravel",
+    "gravel",
+    [
+      "wet-sand:moist_sand",
+      "wet-sand:wet_sand",
+      "wet-sand:soaked_sand"
+    ],
+    [
+      "wet-sand:moist_sand",
+      "wet-sand:wet_sand",
+      "wet-sand:soaked_sand"
+    ],
+    [
+      "wet-sand:moist_sand",
+      "wet-sand:wet_sand",
+      "wet-sand:soaked_sand"
+    ],
+    [
+      "wet-sand:moist_sand",
+      "wet-sand:wet_sand",
+      "wet-sand:soaked_sand"
+    ]
+  ],
+  "result": {
+    "id": "minecraft:pink_concrete",
+    "count": 8
+  }
+}

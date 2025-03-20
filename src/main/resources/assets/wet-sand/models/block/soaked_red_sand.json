@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "wet-sand:block/damp_sand"
+    "all": "wet-sand:block/soaked_red_sand"
   }
 }

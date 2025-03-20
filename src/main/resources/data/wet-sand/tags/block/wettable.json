@@ -3,11 +3,15 @@
   "values": [
     "minecraft:sand",
     "wet-sand:moist_sand",
-    "wet-sand:damp_sand",
     "wet-sand:wet_sand",
+    "wet-sand:soaked_sand",
+    "minecraft:suspicious_sand",
+    "wet-sand:moist_suspicious_sand",
+    "wet-sand:wet_suspicious_sand",
+    "wet-sand:soaked_suspicious_sand",
     "minecraft:red_sand",
     "wet-sand:moist_red_sand",
-    "wet-sand:damp_red_sand",
-    "wet-sand:wet_red_sand"
+    "wet-sand:wet_red_sand",
+    "wet-sand:soaked_red_sand"
   ]
 }

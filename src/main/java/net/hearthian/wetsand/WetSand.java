@@ -2,6 +2,7 @@ package net.hearthian.wetsand;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.hearthian.wetsand.events.Events;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,5 +26,7 @@ public class WetSand implements ModInitializer {
 		LOGGER.info("Initializing...");
 		initBlockItems();
 		initCreativePlacement();
+		// Register events
+		Events.registerDry();
 	}
 }

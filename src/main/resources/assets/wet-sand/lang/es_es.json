@@ -1,8 +1,11 @@
 {
 	"block.wet-sand.moist_sand": "Arena húmeda",
-	"block.wet-sand.damp_sand": "Arena mojada",
-	"block.wet-sand.wet_sand": "Arena empapada",
+	"block.wet-sand.wet_sand": "Arena mojada",
+	"block.wet-sand.soaked_sand": "Arena empapada",
+	"block.wet-sand.moist_suspicious_sand": "Arena sospechosa húmeda",
+	"block.wet-sand.wet_suspicious_sand": "Arena sospechosa mojada",
+	"block.wet-sand.soaked_suspicious_sand": "Arena sospechosa empapada",
 	"block.wet-sand.moist_red_sand": "Arena roja húmeda",
-	"block.wet-sand.damp_red_sand": "Arena roja mojada",
-	"block.wet-sand.wet_red_sand": "Arena roja empapada"
+	"block.wet-sand.wet_red_sand": "Arena roja mojada",
+	"block.wet-sand.soaked_red_sand": "Arena roja empapada"
 }

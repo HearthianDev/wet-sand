@@ -1,11 +1,14 @@
 {
-	"required": true,
-	"package": "net.hearthian.wetsand.mixin",
-	"compatibilityLevel": "JAVA_21",
-	"mixins": [
-		"block.RegistryMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
+  "required": true,
+  "package": "net.hearthian.wetsand.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "block.BlockEntityTypeMixin",
+    "block.BrushableBlockEntityMixin",
+    "block.RegistryMixin",
+    "block.SugarCaneBlockMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
 	}
 }
