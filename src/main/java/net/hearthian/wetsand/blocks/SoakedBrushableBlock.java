@@ -11,7 +11,15 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 
 public class SoakedBrushableBlock extends WettableBrushableBlock implements Wettable {
-//    public static final MapCodec<SoakedBlock> CODEC = createCodec(SoakedBrushableBlock::new);
+//    public static final MapCodec<SoakedBrushableBlock> CODEC = RecordCodecBuilder.mapCodec(
+//        instance -> instance.group(
+//            Registries.BLOCK.getCodec().fieldOf("turns_into").forGetter(BrushableBlock::getBaseBlock),
+//            Registries.SOUND_EVENT.getCodec().fieldOf("brush_sound").forGetter(BrushableBlock::getBrushingSound),
+//            Registries.SOUND_EVENT.getCodec().fieldOf("brush_completed_sound").forGetter(BrushableBlock::getBrushingCompleteSound),
+//            createSettingsCodec()
+//        ).apply(instance, SoakedBrushableBlock::new)
+//    );
+
     protected static final VoxelShape COLLISION_SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 14.0, 16.0);
 
 //    @Override

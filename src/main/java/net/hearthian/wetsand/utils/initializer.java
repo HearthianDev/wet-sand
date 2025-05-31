@@ -1,5 +1,8 @@
 package net.hearthian.wetsand.utils;
 
+import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
+import net.fabricmc.fabric.api.biome.v1.BiomeSelectionContext;
+import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.hearthian.wetsand.blocks.*;
 import net.minecraft.block.AbstractBlock;
@@ -15,6 +18,10 @@ import net.minecraft.registry.*;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.gen.GenerationStep;
+import net.minecraft.world.gen.feature.PlacedFeature;
+
+import java.util.function.Predicate;
 
 import static net.hearthian.wetsand.WetSand.MOD_ID;
 
@@ -102,5 +109,12 @@ public class initializer {
             content.addAfter(MOIST_SUSPICIOUS_SAND, WET_SUSPICIOUS_SAND);
             content.addAfter(WET_SUSPICIOUS_SAND, SOAKED_SUSPICIOUS_SAND);
         });
+    }
+
+    public static void initBiomes() {
+        Predicate<BiomeSelectionContext> biomeSelector = BiomeSelectors.foundInOverworld();
+        RegistryKey<PlacedFeature> CUSTOM_PATCHES_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of("wet-sand","soaked_sand"));
+
+        BiomeModifications.addFeature(biomeSelector, GenerationStep.Feature.UNDERGROUND_ORES, CUSTOM_PATCHES_PLACED_KEY);
     }
 }
