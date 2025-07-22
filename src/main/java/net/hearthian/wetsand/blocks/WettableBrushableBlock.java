@@ -12,22 +12,22 @@ public class WettableBrushableBlock extends BrushableBlock implements Wettable {
     private final Wettable.HumidityLevel humidityLevel;
 
     public WettableBrushableBlock(Wettable.HumidityLevel humidityLevel, Block baseBlock, SoundEvent brushingSound, SoundEvent brushingCompleteSound, Settings settings) {
-        super(baseBlock, brushingSound, brushingCompleteSound, settings);
+        super(baseBlock, settings, brushingSound, brushingCompleteSound);
         this.humidityLevel = humidityLevel;
     }
 
-    protected void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+    public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         this.tickHumidity(state, world, pos);
     }
 
-    protected boolean hasRandomTicks(BlockState state) {
+    public boolean hasRandomTicks(BlockState state) {
         return getIncreasedHumidityBlock(state.getBlock()).isPresent();
     }
 
     @Override
     public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         if (world.getBlockEntity(pos) instanceof BrushableBlockEntity brushableBlockEntity) {
-            brushableBlockEntity.scheduledTick(world);
+            brushableBlockEntity.scheduledTick();
         }
 
         if (humidityLevel.ordinal() <= 1 && FallingBlock.canFallThrough(world.getBlockState(pos.down())) && pos.getY() >= world.getBottomY()) {

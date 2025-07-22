@@ -3,7 +3,6 @@ package net.hearthian.wetsand.blocks;
 import com.google.common.base.Suppliers;
 import com.google.common.collect.BiMap;
 import com.google.common.collect.ImmutableBiMap;
-import com.mojang.serialization.Codec;
 import net.hearthian.wetsand.utils.BrushableBlockEntityAccessor;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
@@ -16,6 +15,7 @@ import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.StringIdentifiable;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Vec3i;
 
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -43,7 +43,8 @@ public interface Wettable {
 
     BlockPos.findClosest(pos, HUMIDITY_RANGE, HUMIDITY_RANGE, (conditionPos) -> {
       if (world.getFluidState(conditionPos).isOf(Fluids.WATER) || world.getFluidState(conditionPos).isOf(Fluids.FLOWING_WATER)) {
-        int distance = conditionPos.getChebyshevDistance(pos);
+        int distance = getChebyshevDistance(conditionPos, pos);
+
         if ((HUMIDITY_RANGE - currentLevel) >= distance) {
           maxHumidityLevel.set(HUMIDITY_RANGE - distance + 1);
           return true;
@@ -109,13 +110,20 @@ public interface Wettable {
     return getIncreasedHumidityBlock(state.getBlock()).map((block) -> block.getStateWithProperties(state));
   }
 
+  private int getChebyshevDistance(BlockPos pos, Vec3i vec) {
+    int i = Math.abs(pos.getX() - vec.getX());
+    int j = Math.abs(pos.getY() - vec.getY());
+    int k = Math.abs(pos.getZ() - vec.getZ());
+
+    return Math.max(Math.max(i, j), k);
+  }
+
   enum HumidityLevel implements StringIdentifiable {
     UNAFFECTED("unaffected"),
     MOIST("moist"),
     WET("wet"),
     SOAKED("soaked");
 
-    public static final Codec<HumidityLevel> CODEC = StringIdentifiable.createCodec(HumidityLevel::values);
     private final String id;
 
     HumidityLevel(final String id) {
