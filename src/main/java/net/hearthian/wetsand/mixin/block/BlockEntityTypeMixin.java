@@ -20,10 +20,10 @@ public class BlockEntityTypeMixin {
         index=2
     )
     private static <T> T registerMixin(Registry<? super T> registry, String id, T entry) {
-        if (id.equals("brushable_block")) {
-            return (T) BlockEntityType.Builder.create(BrushableBlockEntity::new, Blocks.SUSPICIOUS_SAND, Blocks.SUSPICIOUS_GRAVEL, MOIST_SUSPICIOUS_SAND, WET_SUSPICIOUS_SAND, SOAKED_SUSPICIOUS_SAND)
-                    .build(Util.getChoiceType(TypeReferences.BLOCK_ENTITY, "brushable_block"));
-        }
+//        if (id.equals("brushable_block")) {
+//            return (T) BlockEntityType.Builder.create(BrushableBlockEntity::new, Blocks.SUSPICIOUS_SAND, Blocks.SUSPICIOUS_GRAVEL, MOIST_SUSPICIOUS_SAND, WET_SUSPICIOUS_SAND, SOAKED_SUSPICIOUS_SAND)
+//                    .build(Util.getChoiceType(TypeReferences.BLOCK_ENTITY, "brushable_block"));
+//        }
 
         return entry;
     }

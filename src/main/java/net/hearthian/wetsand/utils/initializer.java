@@ -50,22 +50,22 @@ public class initializer {
         AbstractBlock.Settings.copy(RED_SAND)
     );
 
-    public static final Block SUSPICIOUS_SAND = new WettableBrushableBlock(
-        Wettable.HumidityLevel.UNAFFECTED, SAND, SoundEvents.ITEM_BRUSH_BRUSHING_SAND, SoundEvents.ITEM_BRUSH_BRUSHING_SAND,
-        AbstractBlock.Settings.create().mapColor(MapColor.PALE_YELLOW).instrument(Instrument.SNARE).strength(0.25F).sounds(BlockSoundGroup.SUSPICIOUS_SAND).pistonBehavior(PistonBehavior.DESTROY)
-    );
-    public static final Block MOIST_SUSPICIOUS_SAND = new WettableBrushableBlock(
-        Wettable.HumidityLevel.MOIST, MOIST_SAND, SoundEvents.ITEM_BRUSH_BRUSHING_SAND, SoundEvents.ITEM_BRUSH_BRUSHING_SAND,
-        AbstractBlock.Settings.copy(SUSPICIOUS_SAND)
-    );
-    public static final Block WET_SUSPICIOUS_SAND = new WettableBrushableBlock(
-        Wettable.HumidityLevel.WET, WET_SAND, SoundEvents.ITEM_BRUSH_BRUSHING_SAND, SoundEvents.ITEM_BRUSH_BRUSHING_SAND,
-        AbstractBlock.Settings.copy(SUSPICIOUS_SAND)
-    );
-    public static final Block SOAKED_SUSPICIOUS_SAND = new SoakedBrushableBlock(
-        SOAKED_SAND, SoundEvents.ITEM_BRUSH_BRUSHING_SAND, SoundEvents.ITEM_BRUSH_BRUSHING_SAND,
-        AbstractBlock.Settings.copy(SUSPICIOUS_SAND)
-    );
+//    public static final Block SUSPICIOUS_SAND = new WettableBrushableBlock(
+//        Wettable.HumidityLevel.UNAFFECTED, SAND, SoundEvents.ITEM_BRUSH_BRUSHING_SAND, SoundEvents.ITEM_BRUSH_BRUSHING_SAND,
+//        AbstractBlock.Settings.create().mapColor(MapColor.PALE_YELLOW).instrument(Instrument.SNARE).strength(0.25F).sounds(BlockSoundGroup.SUSPICIOUS_SAND).pistonBehavior(PistonBehavior.DESTROY)
+//    );
+//    public static final Block MOIST_SUSPICIOUS_SAND = new WettableBrushableBlock(
+//        Wettable.HumidityLevel.MOIST, MOIST_SAND, SoundEvents.ITEM_BRUSH_BRUSHING_SAND, SoundEvents.ITEM_BRUSH_BRUSHING_SAND,
+//        AbstractBlock.Settings.copy(SUSPICIOUS_SAND)
+//    );
+//    public static final Block WET_SUSPICIOUS_SAND = new WettableBrushableBlock(
+//        Wettable.HumidityLevel.WET, WET_SAND, SoundEvents.ITEM_BRUSH_BRUSHING_SAND, SoundEvents.ITEM_BRUSH_BRUSHING_SAND,
+//        AbstractBlock.Settings.copy(SUSPICIOUS_SAND)
+//    );
+//    public static final Block SOAKED_SUSPICIOUS_SAND = new SoakedBrushableBlock(
+//        SOAKED_SAND, SoundEvents.ITEM_BRUSH_BRUSHING_SAND, SoundEvents.ITEM_BRUSH_BRUSHING_SAND,
+//        AbstractBlock.Settings.copy(SUSPICIOUS_SAND)
+//    );
 
     private static void registerBlockItem(String path, Block block) {
         RegistryKey<Item> itemKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MOD_ID, path));
@@ -82,9 +82,9 @@ public class initializer {
         registerBlockItem("moist_red_sand", MOIST_RED_SAND);
         registerBlockItem("wet_red_sand", WET_RED_SAND);
         registerBlockItem("soaked_red_sand", SOAKED_RED_SAND);
-        registerBlockItem("moist_suspicious_sand", MOIST_SUSPICIOUS_SAND);
-        registerBlockItem("wet_suspicious_sand", WET_SUSPICIOUS_SAND);
-        registerBlockItem("soaked_suspicious_sand", SOAKED_SUSPICIOUS_SAND);
+//        registerBlockItem("moist_suspicious_sand", MOIST_SUSPICIOUS_SAND);
+//        registerBlockItem("wet_suspicious_sand", WET_SUSPICIOUS_SAND);
+//        registerBlockItem("soaked_suspicious_sand", SOAKED_SUSPICIOUS_SAND);
 
     }
 
@@ -97,10 +97,10 @@ public class initializer {
             content.addAfter(MOIST_RED_SAND, WET_RED_SAND);
             content.addAfter(WET_RED_SAND, SOAKED_RED_SAND);
         });
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(content -> {
-            content.addAfter(Items.SUSPICIOUS_SAND, MOIST_SUSPICIOUS_SAND);
-            content.addAfter(MOIST_SUSPICIOUS_SAND, WET_SUSPICIOUS_SAND);
-            content.addAfter(WET_SUSPICIOUS_SAND, SOAKED_SUSPICIOUS_SAND);
-        });
+//        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(content -> {
+//            content.addAfter(Items.SUSPICIOUS_SAND, MOIST_SUSPICIOUS_SAND);
+//            content.addAfter(MOIST_SUSPICIOUS_SAND, WET_SUSPICIOUS_SAND);
+//            content.addAfter(WET_SUSPICIOUS_SAND, SOAKED_SUSPICIOUS_SAND);
+//        });
     }
 }
