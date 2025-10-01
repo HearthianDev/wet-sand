@@ -37,11 +37,11 @@ public interface RegistryMixin {
             ((MutableRegistry) reg).add(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(MOD_ID, "vanilla_red_sand")), entry, Lifecycle.stable());
             cir.setReturnValue(RED_SAND);
         }
-//        if (id.getValue().toString().equals("minecraft:suspicious_sand")) {
-//            LOGGER.info("REGISTERING SUSPICIOUS SAND... {} {}", entry, entry.equals(Blocks.SUSPICIOUS_SAND));
-//            ((MutableRegistry) reg).add(id, SUSPICIOUS_SAND, Lifecycle.stable());
-//            ((MutableRegistry) reg).add(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(MOD_ID, "vanilla_suspicious_sand")), entry, Lifecycle.stable());
-//            cir.setReturnValue(SUSPICIOUS_SAND);
-//        }
+        if (id.getValue().toString().equals("minecraft:suspicious_sand")) {
+            LOGGER.info("REGISTERING SUSPICIOUS SAND... {} {}", entry, entry.equals(Blocks.SUSPICIOUS_SAND));
+            ((MutableRegistry) reg).add(id, SUSPICIOUS_SAND, Lifecycle.stable());
+            ((MutableRegistry) reg).add(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(MOD_ID, "vanilla_suspicious_sand")), entry, Lifecycle.stable());
+            cir.setReturnValue(SUSPICIOUS_SAND);
+        }
     }
 }
