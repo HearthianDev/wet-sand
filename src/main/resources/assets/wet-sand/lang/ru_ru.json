@@ -1,0 +1,13 @@
+{
+	"block.wet-sand.moist_sand": "Влажный песок",
+	"block.wet-sand.wet_sand": "Мокрый песок",
+	"block.wet-sand.soaked_sand": "Размокший песок",
+	"block.wet-sand.moist_suspicious_sand": "Влажный подозрительный песок",
+	"block.wet-sand.wet_suspicious_sand": "Мокрый подозрительный песок",
+	"block.wet-sand.soaked_suspicious_sand": "Размокший подозрительный песок",
+	"block.wet-sand.moist_red_sand": "Влажный красный песок",
+	"block.wet-sand.wet_red_sand": "Мокрый красный песок",
+	"block.wet-sand.soaked_red_sand": "Размокший красный песок",
+
+	"modmenu.descriptionTranslation.wet-sand": "Мод добавляет варианты мокрого песка."
+}
