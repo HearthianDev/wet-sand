@@ -1,6 +1,6 @@
 package net.hearthian.wetsand.utils;
 
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.hearthian.wetsand.blocks.*;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -93,18 +93,18 @@ public class initializer {
     }
 
     public static void initCreativePlacement() {
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.NATURAL_BLOCKS).register(content -> {
-            content.addAfter(Items.SAND, MOIST_SAND);
-            content.addAfter(MOIST_SAND, WET_SAND);
-            content.addAfter(WET_SAND, SOAKED_SAND);
-            content.addAfter(Items.RED_SAND, MOIST_RED_SAND);
-            content.addAfter(MOIST_RED_SAND, WET_RED_SAND);
-            content.addAfter(WET_RED_SAND, SOAKED_RED_SAND);
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.NATURAL_BLOCKS).register(content -> {
+            content.insertAfter(Items.SAND, MOIST_SAND);
+            content.insertAfter(MOIST_SAND, WET_SAND);
+            content.insertAfter(WET_SAND, SOAKED_SAND);
+            content.insertAfter(Items.RED_SAND, MOIST_RED_SAND);
+            content.insertAfter(MOIST_RED_SAND, WET_RED_SAND);
+            content.insertAfter(WET_RED_SAND, SOAKED_RED_SAND);
         });
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(content -> {
-            content.addAfter(Items.SUSPICIOUS_SAND, MOIST_SUSPICIOUS_SAND);
-            content.addAfter(MOIST_SUSPICIOUS_SAND, WET_SUSPICIOUS_SAND);
-            content.addAfter(WET_SUSPICIOUS_SAND, SOAKED_SUSPICIOUS_SAND);
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(content -> {
+            content.insertAfter(Items.SUSPICIOUS_SAND, MOIST_SUSPICIOUS_SAND);
+            content.insertAfter(MOIST_SUSPICIOUS_SAND, WET_SUSPICIOUS_SAND);
+            content.insertAfter(WET_SUSPICIOUS_SAND, SOAKED_SUSPICIOUS_SAND);
         });
     }
 }
