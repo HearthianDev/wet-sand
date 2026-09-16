@@ -45,17 +45,15 @@ public interface Wettable {
 
     AtomicInteger maxHumidityLevel = new AtomicInteger(0);
 
-    BlockPos.findClosestMatch(pos, HUMIDITY_RANGE, HUMIDITY_RANGE, (conditionPos) -> {
+    for (BlockPos conditionPos : BlockPos.withinBoxByManhattanDistance(pos, HUMIDITY_RANGE, HUMIDITY_RANGE, HUMIDITY_RANGE)) {
       if (world.getFluidState(conditionPos).is(Fluids.WATER) || world.getFluidState(conditionPos).is(Fluids.FLOWING_WATER)) {
         int distance = conditionPos.distChessboard(pos);
         if ((HUMIDITY_RANGE - currentLevel) >= distance) {
           maxHumidityLevel.set(HUMIDITY_RANGE - distance + 1);
-          return true;
+          break;
         }
       }
-
-      return false;
-    });
+    }
 
     BlockPos[] adjacent = { pos.north(), pos.south(), pos.south(), pos.east(), pos.west(), pos.above(), pos.below() };
 

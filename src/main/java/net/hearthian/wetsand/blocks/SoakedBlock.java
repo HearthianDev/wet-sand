@@ -1,6 +1,5 @@
 package net.hearthian.wetsand.blocks;
 
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
@@ -12,13 +11,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 
 public class SoakedBlock extends Block implements Wettable {
-    public static final MapCodec<SoakedBlock> CODEC = simpleCodec(SoakedBlock::new);
     protected static final VoxelShape COLLISION_SHAPE = Block.box(0.0, 0.0, 0.0, 16.0, 14.0, 16.0);
-
-    @Override
-    public @NotNull MapCodec<SoakedBlock> codec() {
-        return CODEC;
-    }
 
     public SoakedBlock(Properties settings) {
         super(settings);

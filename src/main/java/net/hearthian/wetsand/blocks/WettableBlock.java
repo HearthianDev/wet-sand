@@ -1,7 +1,5 @@
 package net.hearthian.wetsand.blocks;
 
-import com.mojang.serialization.MapCodec;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
@@ -11,12 +9,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.NotNull;
 
 public class WettableBlock extends Block implements Wettable {
-    public static final MapCodec<WettableBlock> CODEC = RecordCodecBuilder.mapCodec((instance) -> instance.group(HumidityLevel.CODEC.fieldOf("humidity_state").forGetter(Wettable::getHumidityLevel), propertiesCodec()).apply(instance, WettableBlock::new));
     private final HumidityLevel humidityLevel;
-
-    public @NotNull MapCodec<WettableBlock> codec() {
-        return CODEC;
-    }
 
     public WettableBlock(HumidityLevel humidityLevel, BlockBehaviour.Properties settings) {
         super(settings);

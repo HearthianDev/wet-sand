@@ -56,7 +56,9 @@ public class initializer {
 
     public static final Block SUSPICIOUS_SAND = new WettableBrushableBlock(
             Wettable.HumidityLevel.UNAFFECTED, SAND, SoundEvents.BRUSH_SAND, SoundEvents.BRUSH_SAND,
-            BlockBehaviour.Properties.of().mapColor(MapColor.SAND).instrument(NoteBlockInstrument.SNARE).strength(0.25F).sound(SoundType.SUSPICIOUS_SAND).pushReaction(PushReaction.DESTROY).setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath("minecraft", "suspicious_sand")))
+            BlockBehaviour.Properties.of().mapColor(MapColor.SAND).instrument(NoteBlockInstrument.SNARE)
+                    .strength(0.25F).sound(SoundType.SUSPICIOUS_SAND)
+                    .pushReaction(PushReaction.POPPED).setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath("minecraft", "suspicious_sand")))
     );
     public static final Block MOIST_SUSPICIOUS_SAND = new WettableBrushableBlock(
             Wettable.HumidityLevel.MOIST, MOIST_SAND, SoundEvents.BRUSH_SAND, SoundEvents.BRUSH_SAND,
@@ -89,7 +91,6 @@ public class initializer {
         registerBlockItem("moist_suspicious_sand", MOIST_SUSPICIOUS_SAND);
         registerBlockItem("wet_suspicious_sand", WET_SUSPICIOUS_SAND);
         registerBlockItem("soaked_suspicious_sand", SOAKED_SUSPICIOUS_SAND);
-
     }
 
     public static void initCreativePlacement() {
