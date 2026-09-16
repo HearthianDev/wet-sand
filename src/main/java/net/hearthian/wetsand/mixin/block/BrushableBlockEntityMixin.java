@@ -4,7 +4,7 @@ import net.hearthian.wetsand.utils.BrushableBlockEntityAccessor;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.entity.BlockEntityTypes;
 import net.minecraft.world.level.block.entity.BrushableBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import org.spongepowered.asm.mixin.Mixin;
@@ -16,7 +16,7 @@ public class BrushableBlockEntityMixin extends BlockEntity implements BrushableB
     private ItemStack item;
 
     public BrushableBlockEntityMixin(BlockPos pos, BlockState state) {
-        super(BlockEntityType.BRUSHABLE_BLOCK, pos, state);
+        super(BlockEntityTypes.BRUSHABLE_BLOCK, pos, state);
     }
 
     @Override
