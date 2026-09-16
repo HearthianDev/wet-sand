@@ -25,6 +25,258 @@
         "then": {
           "id": "minecraft:sandstone"
         }
+      },
+      {
+        "if_true": {
+          "type": "minecraft:matching_blocks",
+          "blocks": "minecraft:water",
+          "offset": [
+            0,
+            -1,
+            0
+          ]
+        },
+        "then": {
+          "id": "wet-sand:soaked_sand"
+        }
+      },
+      {
+        "if_true": {
+          "type": "minecraft:matching_blocks",
+          "blocks": "minecraft:water",
+          "offset": [
+            0,
+            1,
+            0
+          ]
+        },
+        "then": {
+          "id": "wet-sand:soaked_sand"
+        }
+      },
+      {
+        "if_true": {
+          "type": "minecraft:matching_blocks",
+          "blocks": "minecraft:water",
+          "offset": [
+            -1,
+            0,
+            0
+          ]
+        },
+        "then": {
+          "id": "wet-sand:soaked_sand"
+        }
+      },
+      {
+        "if_true": {
+          "type": "minecraft:matching_blocks",
+          "blocks": "minecraft:water",
+          "offset": [
+            1,
+            0,
+            0
+          ]
+        },
+        "then": {
+          "id": "wet-sand:soaked_sand"
+        }
+      },
+      {
+        "if_true": {
+          "type": "minecraft:matching_blocks",
+          "blocks": "minecraft:water",
+          "offset": [
+            0,
+            0,
+            -1
+          ]
+        },
+        "then": {
+          "id": "wet-sand:soaked_sand"
+        }
+      },
+      {
+        "if_true": {
+          "type": "minecraft:matching_blocks",
+          "blocks": "minecraft:water",
+          "offset": [
+            0,
+            0,
+            1
+          ]
+        },
+        "then": {
+          "id": "wet-sand:soaked_sand"
+        }
+      },
+      {
+        "if_true": {
+          "type": "minecraft:matching_blocks",
+          "blocks": "wet-sand:soaked_sand",
+          "offset": [
+            0,
+            -1,
+            0
+          ]
+        },
+        "then": {
+          "id": "wet-sand:wet_sand"
+        }
+      },
+      {
+        "if_true": {
+          "type": "minecraft:matching_blocks",
+          "blocks": "wet-sand:soaked_sand",
+          "offset": [
+            0,
+            1,
+            0
+          ]
+        },
+        "then": {
+          "id": "wet-sand:wet_sand"
+        }
+      },
+      {
+        "if_true": {
+          "type": "minecraft:matching_blocks",
+          "blocks": "wet-sand:soaked_sand",
+          "offset": [
+            -1,
+            0,
+            0
+          ]
+        },
+        "then": {
+          "id": "wet-sand:wet_sand"
+        }
+      },
+      {
+        "if_true": {
+          "type": "minecraft:matching_blocks",
+          "blocks": "wet-sand:soaked_sand",
+          "offset": [
+            1,
+            0,
+            0
+          ]
+        },
+        "then": {
+          "id": "wet-sand:wet_sand"
+        }
+      },
+      {
+        "if_true": {
+          "type": "minecraft:matching_blocks",
+          "blocks": "wet-sand:soaked_sand",
+          "offset": [
+            0,
+            0,
+            -1
+          ]
+        },
+        "then": {
+          "id": "wet-sand:wet_sand"
+        }
+      },
+      {
+        "if_true": {
+          "type": "minecraft:matching_blocks",
+          "blocks": "wet-sand:soaked_sand",
+          "offset": [
+            0,
+            0,
+            1
+          ]
+        },
+        "then": {
+          "id": "wet-sand:wet_sand"
+        }
+      },
+      {
+        "if_true": {
+          "type": "minecraft:matching_blocks",
+          "blocks": "wet-sand:wet_sand",
+          "offset": [
+            0,
+            -1,
+            0
+          ]
+        },
+        "then": {
+          "id": "wet-sand:moist_sand"
+        }
+      },
+      {
+        "if_true": {
+          "type": "minecraft:matching_blocks",
+          "blocks": "wet-sand:wet_sand",
+          "offset": [
+            0,
+            1,
+            0
+          ]
+        },
+        "then": {
+          "id": "wet-sand:moist_sand"
+        }
+      },
+      {
+        "if_true": {
+          "type": "minecraft:matching_blocks",
+          "blocks": "wet-sand:wet_sand",
+          "offset": [
+            -1,
+            0,
+            0
+          ]
+        },
+        "then": {
+          "id": "wet-sand:moist_sand"
+        }
+      },
+      {
+        "if_true": {
+          "type": "minecraft:matching_blocks",
+          "blocks": "wet-sand:wet_sand",
+          "offset": [
+            1,
+            0,
+            0
+          ]
+        },
+        "then": {
+          "id": "wet-sand:moist_sand"
+        }
+      },
+      {
+        "if_true": {
+          "type": "minecraft:matching_blocks",
+          "blocks": "wet-sand:wet_sand",
+          "offset": [
+            0,
+            0,
+            -1
+          ]
+        },
+        "then": {
+          "id": "wet-sand:moist_sand"
+        }
+      },
+      {
+        "if_true": {
+          "type": "minecraft:matching_blocks",
+          "blocks": "wet-sand:wet_sand",
+          "offset": [
+            0,
+            0,
+            1
+          ]
+        },
+        "then": {
+          "id": "wet-sand:moist_sand"
+        }
       }
     ]
   },
