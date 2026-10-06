@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "wet-sand:block/slimed_gray_concrete_powder"
+      },
+      {
+        "model": "wet-sand:block/slimed_gray_concrete_powder",
+        "y": 90
+      },
+      {
+        "model": "wet-sand:block/slimed_gray_concrete_powder",
+        "y": 180
+      },
+      {
+        "model": "wet-sand:block/slimed_gray_concrete_powder",
+        "y": 270
+      }
+    ]
+  }
+}

@@ -1,0 +1,301 @@
+[
+  {
+    "block_state_provider": {
+      "type": "minecraft:rule_based",
+      "rules": [
+        {
+          "if_true": {
+            "type": "minecraft:all_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_block_tag",
+                "tag": "minecraft:turns_into_dirt_path"
+              },
+              {
+                "type": "minecraft:matching_block_tag",
+                "offset": [
+                  0,
+                  1,
+                  0
+                ],
+                "tag": "minecraft:air"
+              }
+            ]
+          },
+          "then": {
+            "id": "minecraft:dirt_path"
+          }
+        }
+      ]
+    },
+    "disallowed_faces": [
+      "down"
+    ],
+    "item_damage_per_use": 1,
+    "sound": "minecraft:item.shovel.flatten"
+  },
+  {
+    "block_state_provider": {
+      "type": "minecraft:rule_based",
+      "rules": [
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "wet-sand:slimed_sand"
+          },
+          "then": {
+            "id": "minecraft:sand"
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "wet-sand:slimed_moist_sand"
+          },
+          "then": {
+            "id": "wet-sand:moist_sand"
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "wet-sand:slimed_wet_sand"
+          },
+          "then": {
+            "id": "wet-sand:wet_sand"
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "wet-sand:slimed_soaked_sand"
+          },
+          "then": {
+            "id": "wet-sand:soaked_sand"
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "wet-sand:slimed_red_sand"
+          },
+          "then": {
+            "id": "minecraft:red_sand"
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "wet-sand:slimed_moist_red_sand"
+          },
+          "then": {
+            "id": "wet-sand:moist_red_sand"
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "wet-sand:slimed_wet_red_sand"
+          },
+          "then": {
+            "id": "wet-sand:wet_red_sand"
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "wet-sand:slimed_soaked_red_sand"
+          },
+          "then": {
+            "id": "wet-sand:soaked_red_sand"
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "wet-sand:slimed_suspicious_sand"
+          },
+          "then": {
+            "id": "minecraft:suspicious_sand"
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "wet-sand:slimed_moist_suspicious_sand"
+          },
+          "then": {
+            "id": "wet-sand:moist_suspicious_sand"
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "wet-sand:slimed_wet_suspicious_sand"
+          },
+          "then": {
+            "id": "wet-sand:wet_suspicious_sand"
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "wet-sand:slimed_soaked_suspicious_sand"
+          },
+          "then": {
+            "id": "wet-sand:soaked_suspicious_sand"
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "wet-sand:slimed_black_concrete_powder"
+          },
+          "then": {
+            "id": "minecraft:black_concrete_powder"
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "wet-sand:slimed_blue_concrete_powder"
+          },
+          "then": {
+            "id": "minecraft:blue_concrete_powder"
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "wet-sand:slimed_brown_concrete_powder"
+          },
+          "then": {
+            "id": "minecraft:brown_concrete_powder"
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "wet-sand:slimed_cyan_concrete_powder"
+          },
+          "then": {
+            "id": "minecraft:cyan_concrete_powder"
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "wet-sand:slimed_gray_concrete_powder"
+          },
+          "then": {
+            "id": "minecraft:gray_concrete_powder"
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "wet-sand:slimed_green_concrete_powder"
+          },
+          "then": {
+            "id": "minecraft:green_concrete_powder"
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "wet-sand:slimed_light_blue_concrete_powder"
+          },
+          "then": {
+            "id": "minecraft:light_blue_concrete_powder"
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "wet-sand:slimed_light_gray_concrete_powder"
+          },
+          "then": {
+            "id": "minecraft:light_gray_concrete_powder"
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "wet-sand:slimed_lime_concrete_powder"
+          },
+          "then": {
+            "id": "minecraft:lime_concrete_powder"
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "wet-sand:slimed_magenta_concrete_powder"
+          },
+          "then": {
+            "id": "minecraft:magenta_concrete_powder"
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "wet-sand:slimed_orange_concrete_powder"
+          },
+          "then": {
+            "id": "minecraft:orange_concrete_powder"
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "wet-sand:slimed_pink_concrete_powder"
+          },
+          "then": {
+            "id": "minecraft:pink_concrete_powder"
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "wet-sand:slimed_purple_concrete_powder"
+          },
+          "then": {
+            "id": "minecraft:purple_concrete_powder"
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "wet-sand:slimed_red_concrete_powder"
+          },
+          "then": {
+            "id": "minecraft:red_concrete_powder"
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "wet-sand:slimed_white_concrete_powder"
+          },
+          "then": {
+            "id": "minecraft:white_concrete_powder"
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "wet-sand:slimed_yellow_concrete_powder"
+          },
+          "then": {
+            "id": "minecraft:yellow_concrete_powder"
+          }
+        }
+      ]
+    },
+    "disallowed_faces": [
+      "down"
+    ],
+    "item_damage_per_use": 1,
+    "sound": "minecraft:item.shovel.flatten"
+  }
+]

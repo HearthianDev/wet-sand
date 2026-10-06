@@ -28,5 +28,6 @@ public class WetSand implements ModInitializer {
         initCreativePlacement();
         // Register events
         Events.registerDry();
+        Events.registerSlime();
     }
 }

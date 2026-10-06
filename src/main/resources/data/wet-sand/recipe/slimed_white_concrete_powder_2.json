@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "slimed_concrete_powder",
+  "ingredients": [
+    "minecraft:slime_ball",
+    "minecraft:white_concrete_powder"
+  ],
+  "result": {
+    "id": "wet-sand:slimed_white_concrete_powder",
+    "count": 1
+  }
+}

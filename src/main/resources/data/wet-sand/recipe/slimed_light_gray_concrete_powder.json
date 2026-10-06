@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "slimed_concrete_powder",
+  "ingredients": [
+    "minecraft:light_gray_dye",
+    "gravel",
+    "gravel",
+    "gravel",
+    "gravel",
+    "wet-sand:slimed_sand",
+    "wet-sand:slimed_sand",
+    "wet-sand:slimed_sand",
+    "wet-sand:slimed_sand"
+  ],
+  "result": {
+    "id": "wet-sand:slimed_light_gray_concrete_powder",
+    "count": 8
+  }
+}

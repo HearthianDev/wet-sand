@@ -12,16 +12,17 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 
 public class SoakedBrushableBlock extends WettableBrushableBlock implements Wettable {
-//    public static final MapCodec<SoakedBlock> CODEC = createCodec(SoakedBrushableBlock::new);
     protected static final VoxelShape COLLISION_SHAPE = Block.box(0.0, 0.0, 0.0, 16.0, 14.0, 16.0);
+    private final HumidityLevel humidityLevel;
 
-//    @Override
-//    public MapCodec<SoakedBrushableBlock> getCodec() {
-//        return CODEC;
-//    }
 
-    public SoakedBrushableBlock(Block baseBlock, SoundEvent brushingSound, SoundEvent brushingCompleteSound, Properties settings) {
-        super(HumidityLevel.SOAKED, baseBlock, brushingSound, brushingCompleteSound, settings);
+    public SoakedBrushableBlock(HumidityLevel humidityLevel, Block baseBlock, SoundEvent brushingSound, SoundEvent brushingCompleteSound, Properties settings) {
+        super(humidityLevel, baseBlock, brushingSound, brushingCompleteSound, settings);
+        this.humidityLevel = humidityLevel;
+    }
+
+    protected boolean isRandomlyTicking(BlockState state) {
+        return getDecreasedHumidityBlock(state.getBlock()).isPresent();
     }
 
     @Override
@@ -50,6 +51,6 @@ public class SoakedBrushableBlock extends WettableBrushableBlock implements Wett
     }
 
     public HumidityLevel getHumidityLevel() {
-        return HumidityLevel.SOAKED;
+        return humidityLevel;
     }
 }

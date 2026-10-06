@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "wet-sand:slimed_black_concrete_powder",
+    "wet-sand:slimed_blue_concrete_powder",
+    "wet-sand:slimed_brown_concrete_powder",
+    "wet-sand:slimed_cyan_concrete_powder",
+    "wet-sand:slimed_gray_concrete_powder",
+    "wet-sand:slimed_green_concrete_powder",
+    "wet-sand:slimed_light_blue_concrete_powder",
+    "wet-sand:slimed_light_gray_concrete_powder",
+    "wet-sand:slimed_lime_concrete_powder",
+    "wet-sand:slimed_magenta_concrete_powder",
+    "wet-sand:slimed_orange_concrete_powder",
+    "wet-sand:slimed_pink_concrete_powder",
+    "wet-sand:slimed_purple_concrete_powder",
+    "wet-sand:slimed_red_concrete_powder",
+    "wet-sand:slimed_white_concrete_powder",
+    "wet-sand:slimed_yellow_concrete_powder"
+  ]
+}

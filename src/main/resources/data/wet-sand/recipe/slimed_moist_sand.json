@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "wet-sand:moist_sand",
+    "minecraft:slime_ball"
+  ],
+  "result": {
+    "count": 1,
+    "id": "wet-sand:slimed_moist_sand"
+  }
+}

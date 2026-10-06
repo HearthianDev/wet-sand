@@ -11,22 +11,34 @@
     [
       "wet-sand:moist_sand",
       "wet-sand:wet_sand",
-      "wet-sand:soaked_sand"
+      "wet-sand:soaked_sand",
+      "wet-sand:slimed_moist_sand",
+      "wet-sand:slimed_wet_sand",
+      "wet-sand:slimed_soaked_sand"
     ],
     [
       "wet-sand:moist_sand",
       "wet-sand:wet_sand",
-      "wet-sand:soaked_sand"
+      "wet-sand:soaked_sand",
+      "wet-sand:slimed_moist_sand",
+      "wet-sand:slimed_wet_sand",
+      "wet-sand:slimed_soaked_sand"
     ],
     [
       "wet-sand:moist_sand",
       "wet-sand:wet_sand",
-      "wet-sand:soaked_sand"
+      "wet-sand:soaked_sand",
+      "wet-sand:slimed_moist_sand",
+      "wet-sand:slimed_wet_sand",
+      "wet-sand:slimed_soaked_sand"
     ],
     [
       "wet-sand:moist_sand",
       "wet-sand:wet_sand",
-      "wet-sand:soaked_sand"
+      "wet-sand:soaked_sand",
+      "wet-sand:slimed_moist_sand",
+      "wet-sand:slimed_wet_sand",
+      "wet-sand:slimed_soaked_sand"
     ]
   ],
   "result": {

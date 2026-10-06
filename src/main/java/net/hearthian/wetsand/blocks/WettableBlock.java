@@ -17,7 +17,6 @@ public class WettableBlock extends Block implements Wettable {
     }
 
     protected void randomTick(@NotNull BlockState state, @NotNull ServerLevel world, @NotNull BlockPos pos, @NotNull RandomSource random) {
-//        LOGGER.info("GETS RANDOM TICK...");
         this.tickHumidity(state, world, pos);
     }
 
