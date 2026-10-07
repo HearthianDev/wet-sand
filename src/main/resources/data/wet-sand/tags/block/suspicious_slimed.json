@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "wet-sand:slimed_suspicious_sand",
+    "wet-sand:slimed_moist_suspicious_sand",
+    "wet-sand:slimed_wet_suspicious_sand",
+    "wet-sand:slimed_soaked_suspicious_sand"
+  ]
+}

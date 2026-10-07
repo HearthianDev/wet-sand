@@ -1,4 +1,30 @@
 {
   "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "modifier": {
+            "type": "minecraft:copy_custom_data",
+            "source": "block_entity",
+            "ops": [
+              {
+                "source": "item",
+                "target": "item",
+                "op": "replace"
+              }
+            ]
+          },
+          "condition": {
+            "type": "minecraft:survives_explosion"
+          },
+          "name": "wet-sand:slimed_moist_suspicious_sand"
+        }
+      ],
+      "rolls": 1
+    }
+  ],
   "random_sequence": "wet-sand:blocks/slimed_moist_suspicious_sand"
 }

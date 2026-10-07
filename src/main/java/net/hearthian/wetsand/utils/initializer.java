@@ -8,6 +8,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -105,20 +106,20 @@ public class initializer {
             Wettable.HumidityLevel.SOAKED, SOAKED_SAND, SoundEvents.BRUSH_SAND, SoundEvents.BRUSH_SAND,
             BlockBehaviour.Properties.ofFullCopy(SUSPICIOUS_SAND).setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(MOD_ID, "soaked_suspicious_sand")))
     );
-    public static final Block SLIMED_SUSPICIOUS_SAND = new WettableFallingBlock(
-            Wettable.HumidityLevel.UNAFFECTED,
+    public static final Block SLIMED_SUSPICIOUS_SAND = new WettableBrushableBlock(
+            Wettable.HumidityLevel.UNAFFECTED, SLIMED_SAND, SoundEvents.BRUSH_SAND, SoundEvents.BRUSH_SAND,
             BlockBehaviour.Properties.of().mapColor(MapColor.SAND).instrument(NoteBlockInstrument.SNARE).strength(0.5F).sound(SoundType.SAND).setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(MOD_ID, "slimed_suspicious_sand")))
     );
     public static final Block SLIMED_MOIST_SUSPICIOUS_SAND = new WettableBrushableBlock(
-            Wettable.HumidityLevel.MOIST, MOIST_SAND, SoundEvents.BRUSH_SAND, SoundEvents.BRUSH_SAND,
+            Wettable.HumidityLevel.MOIST, SLIMED_MOIST_SAND, SoundEvents.BRUSH_SAND, SoundEvents.BRUSH_SAND,
             BlockBehaviour.Properties.ofFullCopy(SUSPICIOUS_SAND).setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(MOD_ID, "slimed_moist_suspicious_sand")))
     );
     public static final Block SLIMED_WET_SUSPICIOUS_SAND = new WettableBrushableBlock(
-            Wettable.HumidityLevel.WET, WET_SAND, SoundEvents.BRUSH_SAND, SoundEvents.BRUSH_SAND,
+            Wettable.HumidityLevel.WET, SLIMED_WET_SAND, SoundEvents.BRUSH_SAND, SoundEvents.BRUSH_SAND,
             BlockBehaviour.Properties.ofFullCopy(SUSPICIOUS_SAND).setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(MOD_ID, "slimed_wet_suspicious_sand")))
     );
     public static final Block SLIMED_SOAKED_SUSPICIOUS_SAND = new SoakedBrushableBlock(
-            Wettable.HumidityLevel.SOAKED, SOAKED_SAND, SoundEvents.BRUSH_SAND, SoundEvents.BRUSH_SAND,
+            Wettable.HumidityLevel.SOAKED, SLIMED_SOAKED_SAND, SoundEvents.BRUSH_SAND, SoundEvents.BRUSH_SAND,
             BlockBehaviour.Properties.ofFullCopy(SUSPICIOUS_SAND).setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(MOD_ID, "slimed_soaked_suspicious_sand")))
     );
 
@@ -138,6 +139,10 @@ public class initializer {
     public static final Block SLIMED_RED_CONCRETE_POWDER = new Block(BlockBehaviour.Properties.of().mapColor(DyeColor.RED.getMapColor()).instrument(NoteBlockInstrument.SNARE).strength(0.5F).sound(SoundType.SAND).setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath("wet-sand", "slimed_red_concrete_powder"))));
     public static final Block SLIMED_WHITE_CONCRETE_POWDER = new Block(BlockBehaviour.Properties.of().mapColor(DyeColor.WHITE.getMapColor()).instrument(NoteBlockInstrument.SNARE).strength(0.5F).sound(SoundType.SAND).setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath("wet-sand", "slimed_white_concrete_powder"))));
     public static final Block SLIMED_YELLOW_CONCRETE_POWDER = new Block(BlockBehaviour.Properties.of().mapColor(DyeColor.YELLOW.getMapColor()).instrument(NoteBlockInstrument.SNARE).strength(0.5F).sound(SoundType.SAND).setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath("wet-sand", "slimed_yellow_concrete_powder"))));
+
+    public static TagKey<Block> WettableTag = TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath("wet-sand", "wettable"));
+    public static TagKey<Block> DriableTag = TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath("wet-sand", "driable"));
+    public static TagKey<Block> SuspiciousSlimedTag = TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath("wet-sand", "suspicious_slimed"));
 
     private static void registerBlockItem(String path, Block block) {
         ResourceKey<@NotNull Item> itemKey = ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MOD_ID, path));

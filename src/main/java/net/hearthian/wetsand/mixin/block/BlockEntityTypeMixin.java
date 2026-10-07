@@ -17,7 +17,7 @@ public class BlockEntityTypeMixin {
     private static <E> E[] setOf(E[] elements) {
         // TODO: Add items instead of rebuilding them (for compatibility with other mods)
         if (Set.of(Blocks.SUSPICIOUS_SAND, Blocks.SUSPICIOUS_GRAVEL).equals(Set.of(elements))) {
-            Block[] extra = { Blocks.SUSPICIOUS_SAND, Blocks.SUSPICIOUS_GRAVEL, MOIST_SUSPICIOUS_SAND, WET_SUSPICIOUS_SAND, SOAKED_SUSPICIOUS_SAND, SLIMED_MOIST_SUSPICIOUS_SAND, SLIMED_WET_SUSPICIOUS_SAND, SLIMED_SOAKED_SUSPICIOUS_SAND };
+            Block[] extra = { Blocks.SUSPICIOUS_SAND, Blocks.SUSPICIOUS_GRAVEL, MOIST_SUSPICIOUS_SAND, WET_SUSPICIOUS_SAND, SOAKED_SUSPICIOUS_SAND, SLIMED_SUSPICIOUS_SAND, SLIMED_MOIST_SUSPICIOUS_SAND, SLIMED_WET_SUSPICIOUS_SAND, SLIMED_SOAKED_SUSPICIOUS_SAND };
             return (E[]) extra;
         }
 

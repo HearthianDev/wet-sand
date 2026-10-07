@@ -35,6 +35,11 @@ public interface Wettable {
           .put(Blocks.RED_SAND, SLIMED_RED_SAND).put(MOIST_RED_SAND, SLIMED_MOIST_RED_SAND).put(WET_RED_SAND, SLIMED_WET_RED_SAND).put(SOAKED_RED_SAND, SLIMED_SOAKED_RED_SAND)
           .build()
   );
+  Supplier<BiMap<Object, Object>> SLIMED_EQUIVALENCE_DECREASES = Suppliers.memoize(() -> ImmutableBiMap.builder()
+          .put(Blocks.SUSPICIOUS_SAND, SLIMED_SUSPICIOUS_SAND).put(MOIST_SUSPICIOUS_SAND, SLIMED_MOIST_SUSPICIOUS_SAND).put(WET_SUSPICIOUS_SAND, SLIMED_WET_SUSPICIOUS_SAND).put(SOAKED_SUSPICIOUS_SAND, SLIMED_SOAKED_SUSPICIOUS_SAND)
+          .build().inverse()
+  );
+
 
   Supplier<BiMap<Object, Object>> HUMIDITY_LEVEL_INCREASES = Suppliers.memoize(() -> ImmutableBiMap.builder()
           .put(Blocks.SAND, MOIST_SAND).put(MOIST_SAND, WET_SAND).put(WET_SAND, SOAKED_SAND)
@@ -135,6 +140,10 @@ public interface Wettable {
 
   default Optional<BlockState> getSlimedState(BlockState state) {
     return getSlimedBlock(state.getBlock()).map((block) -> block.withPropertiesOf(state));
+  }
+
+  default Optional<BlockState> getUnslimedState(BlockState state) {
+    return Optional.ofNullable((Block)(SLIMED_EQUIVALENCE_DECREASES.get()).get(state.getBlock())).map((block) -> block.withPropertiesOf(state));
   }
 
   enum HumidityLevel implements StringRepresentable {

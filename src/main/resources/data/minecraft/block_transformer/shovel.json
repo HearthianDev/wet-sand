@@ -116,7 +116,7 @@
             "blocks": "wet-sand:slimed_suspicious_sand"
           },
           "then": {
-            "id": "minecraft:suspicious_sand"
+            "id": "wet-sand:slimed_suspicious_sand"
           }
         },
         {
@@ -125,7 +125,7 @@
             "blocks": "wet-sand:slimed_moist_suspicious_sand"
           },
           "then": {
-            "id": "wet-sand:moist_suspicious_sand"
+            "id": "wet-sand:slimed_moist_suspicious_sand"
           }
         },
         {
@@ -134,7 +134,7 @@
             "blocks": "wet-sand:slimed_wet_suspicious_sand"
           },
           "then": {
-            "id": "wet-sand:wet_suspicious_sand"
+            "id": "wet-sand:slimed_wet_suspicious_sand"
           }
         },
         {
@@ -143,7 +143,7 @@
             "blocks": "wet-sand:slimed_soaked_suspicious_sand"
           },
           "then": {
-            "id": "wet-sand:soaked_suspicious_sand"
+            "id": "wet-sand:slimed_soaked_suspicious_sand"
           }
         },
         {
@@ -296,6 +296,7 @@
       "down"
     ],
     "item_damage_per_use": 1,
+    "particle": "wax_off",
     "sound": "minecraft:item.shovel.flatten"
   }
 ]
